@@ -4,7 +4,6 @@ import fetchWeather from './api/fetchWeather';
 const App = () => {
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
-  const URL = `https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`;
 
   const search = async (e) => {
     if (e.key === 'Enter') {
@@ -36,7 +35,7 @@ const App = () => {
           </div>
           <div className='info'>
             <img
-              src={URL}
+              src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
               alt={weather.weather[0].description}
               className='city-icon'
             />
